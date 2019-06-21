@@ -12,9 +12,8 @@ b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
 
 c = []
 for aa in a:
-    for bb in b:
-        if aa == bb:
-            c.append(bb)
+    if aa in b:
+        c.append(aa)
 
 print("List one is :{0}".format(a))
 print("List two is :{0}".format(b))
