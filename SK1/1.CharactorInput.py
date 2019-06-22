@@ -10,3 +10,4 @@ Print out that many copies of the previous message on separate lines.
 name = input("Please enter your name :")
 age = int(input("Please enter your age :"))
 print("Hi {0},\n\nYou will become 100 year on {1}".format(name, 2019-age+100))
+print("Thanks")
