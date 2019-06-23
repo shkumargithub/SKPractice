@@ -10,8 +10,41 @@ Paper beats rock"""
 player1 = input("Please enter the name for player1:")
 player2 = input("Please enter the name for player2:")
 
-p1_value =input("Please enter your choise for {0}:".format(player1))
-p2_value =input("Please enter your choise for {0}:".format(player2))
 
-print(player1 + " " + p1_value)
-print(player2 + " " + p2_value)
+def compare(p1,p2):
+    value = ["rock","scissor","paper"]
+    if p1 in value and p2 in value:
+        if p1 == p2:
+            print("It is tie.")
+        if p1 == "rock":
+            if p2 == "scissor":
+                print("{0} wins".format(player1))
+            else:
+                print("{0} wins".format(player2))
+        elif p1 == "scissor":
+            if p2 == "paper":
+                print("{0} wins".format(player1))
+            else:
+                print("{0} wins".format(player2))
+        else:
+            if p2 == "scissor":
+                print("{0} wins".format(player1))
+            else:
+                print("{0} wins".format(player2))
+    else:
+        print("Values not correct")
+
+
+
+while True:
+    p1_value = input("Please enter your choise for {0}:".format(player1))
+    p2_value = input("Please enter your choise for {0}:".format(player2))
+    compare(str.lower(p1_value),str.lower(p2_value))
+
+    conf =input("Do you want to play more:")
+    if  str.lower(conf) == 'no':
+        break
+    else:
+        print(str(conf).encode())
+
+#hkjhk
